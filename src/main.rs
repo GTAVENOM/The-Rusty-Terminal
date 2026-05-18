@@ -48,12 +48,20 @@ fn main(){
 fn open_app(app_name: &str){
     #[cfg(target_os="macos")]
     {
-        Command::new("open").arg("-a").arg(app_name).spawn().expect("Failed to open {app_name}");
+        match Command::new("open").arg("-a").arg(app_name).spawn()
+        {
+            Ok(_) => println!("Opened {app_name}"),
+            Err(e) => println!("Failed to open {app_name}: {e}"),
+        }
     }
 
     #[cfg(target_os="linux")]
     {
-        Command::new(app_name).spawn().expect("Failed to open {app_name}");
+        match Command::new(app_name).spawn()
+        {
+            Ok(_) => println!("Opened {app_name}"),
+            Err(e) => println!("Failed to open {app_name}: {e}"),
+        }
     }
 }
 
@@ -61,11 +69,19 @@ fn open_folder(folder: &str){
     let mut path=home_dir().expect("Could not find home directory.");
     path.push(folder);
     #[cfg(target_os = "macos")]{
-        Command::new("open").arg(path).spawn().expect("Failed to open {path}");
+        match Command::new("open").arg(&path).spawn()
+        {
+            Ok(_) => println!("Opened {}",path.display()),
+            Err(e) => println!("Failed to open {}: {e}",path.display())
+        }
     }
 
     #[cfg(target_os = "linux")]
     {
-        Command::new("xdg-open").arg(path).spawn().expect("Failed to open {path}");
+        match Command::new("xdg-open").arg(&path).spawn()
+        {
+            Ok(_) => println!("Opened {}",path.display()),
+            Err(e) => println!("Failed to open {}: {e}",path.display())
+        }
     }
 }

@@ -26,6 +26,14 @@ fn main(){
                 open_app("Zen");
             }
 
+            "open webstorm" => {
+                open_app("WebStorm")
+            }
+
+            "open discord" => {
+                open_app("Discord")
+            }
+
             "open vscode" => {
                 open_app("Visual Studio Code");
             }

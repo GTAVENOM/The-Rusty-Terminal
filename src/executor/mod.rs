@@ -13,8 +13,8 @@ impl SystemExecutor {
             CommandAction::OpenFolder {path}=>self.open_folder(path),
             CommandAction::ExecuteSystemCommand {command,args}=>self.run_command(command,args),
             CommandAction::Exit=>Ok(()),
-            CommandAction::Unknown {original_input}=>{
-                println!("Unknown command: '{}'",original_input);
+            CommandAction::Unknown =>{
+                println!("Unknown command.");
                 Ok(())
             }
         }

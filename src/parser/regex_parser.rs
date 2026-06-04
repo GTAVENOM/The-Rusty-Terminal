@@ -85,6 +85,6 @@ impl CommandParser for RegexParser{
             }
         }
 
-        CommandAction::Unknown {original_input: trimmed.to_string(),}
+        CommandAction::Unknown
     }
 }

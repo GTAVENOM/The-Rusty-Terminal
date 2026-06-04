@@ -4,6 +4,7 @@ use rustyline::DefaultEditor;
 use rustyline::error::ReadlineError;
 use crate::actions::CommandAction;
 use crate::executor::SystemExecutor;
+use crate::parser::ai_parser::AiParser;
 use crate::parser::CommandParser;
 use crate::parser::regex_parser::RegexParser;
 
@@ -15,7 +16,7 @@ fn main() -> Result<(), Box<dyn Error>>{
     println!("Welcome to The Rusty Terminal 🦀");
     println!("Type 'bye' to quit\n");
 
-    let parser=RegexParser::new();
+    let parser=AiParser::new("llama3.2:1b");
     let executor=SystemExecutor::new();
 
     let helper=completer::FolderCompleter::new();

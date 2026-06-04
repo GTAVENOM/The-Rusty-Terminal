@@ -1,10 +1,13 @@
 use std::path::PathBuf;
+use serde::{Serialize,Deserialize};
 
-#[derive(Debug,Clone,PartialEq)]
+#[derive(Debug,Clone,PartialEq,Serialize,Deserialize)]
+#[serde(tag="action")]
 pub enum CommandAction {
     OpenApp {name: String},
     OpenFolder {path: PathBuf},
     ExecuteSystemCommand {command: String, args: Vec<String>},
     Exit,
-    Unknown {original_input: String},
+    #[serde(other)]
+    Unknown,
 }

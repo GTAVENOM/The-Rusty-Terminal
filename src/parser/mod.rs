@@ -5,3 +5,4 @@ pub trait CommandParser {
 }
 
 pub mod regex_parser;
+pub mod ai_parser;

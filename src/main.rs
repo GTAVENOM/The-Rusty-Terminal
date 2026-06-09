@@ -1,12 +1,12 @@
 use std::error::Error;
 use std::io::{self, Write};
 use rustyline::DefaultEditor;
-use rustyline::error::ReadlineError;
+use rustyline::{Config,CompletionType,error::ReadlineError};
 use crate::actions::CommandAction;
 use crate::executor::SystemExecutor;
 use crate::parser::ai_parser::AiParser;
 use crate::parser::CommandParser;
-use crate::parser::regex_parser::RegexParser;
+
 
 mod parser;
 mod executor;
@@ -19,9 +19,11 @@ fn main() -> Result<(), Box<dyn Error>>{
     let parser=AiParser::new("llama3.2:1b");
     let executor=SystemExecutor::new();
 
+    let config=Config::builder().completion_type(CompletionType::List).build();
+
     let helper=completer::FolderCompleter::new();
 
-    let mut rl=rustyline::Editor::new()?;
+    let mut rl=rustyline::Editor::with_config(config)?;
     rl.set_helper(Some(helper));
 
     let history_path=dirs::home_dir().map(|mut path| {

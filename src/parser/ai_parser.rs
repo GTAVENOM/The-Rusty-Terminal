@@ -75,7 +75,6 @@ impl CommandParser for AiParser{
         match response{
             Ok(res)=>{
                 if let Ok(ollama_res)= res.json::<OllamaResponse>(){
-                    println!("DEBUG: Raw LLM Response: {}", ollama_res.response);
                     match serde_json::from_str::<CommandAction>(&ollama_res.response) {
                         Ok(action)=>{
                             match action{

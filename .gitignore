@@ -1,0 +1,6 @@
+/target
+/target_*
+/bin/*.exe
+*.tmp
+*.gguf
+.DS_Store

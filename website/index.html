@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rusty Terminal — Cross-Platform Plain English → Instant Shell Commands</title>
+
+  <!-- Production SEO & Social Meta Tags -->
+  <link rel="canonical" href="https://rustyterminal.vercel.app">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦀</text></svg>">
+  <meta property="og:title" content="Rusty Terminal — Cross-Platform Plain English → Instant Shell Commands">
+  <meta property="og:description"
+    content="Offline-first AI Terminal Wrapper and Independent Terminal App for Windows & macOS. Turn natural language into safe shell commands with built-in 3-Tier Safety.">
+  <meta property="og:url" content="https://rustyterminal.vercel.app">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rusty Terminal">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rusty Terminal — Cross-Platform AI Terminal App">
+  <meta name="twitter:description"
+    content="Turn plain English into safe shell commands instantly. Supports Windows (PowerShell/CMD) & macOS (zsh/bash).">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Dot-Free Clean Tech Box Grid Canvas Background -->
+  <canvas id="bg-grid-canvas"></canvas>
+
+  <!-- Apple-Style Liquid Glass Navbar -->
+  <nav class="navbar liquid-glass-nav">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="crab">🦀</span>
+        <span class="brand-text">Rusty<span class="highlight">Terminal</span></span>
+      </div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#demo">Live Demo</a>
+        <a href="#install">Install</a>
+        <a href="#cheatsheet">Cheatsheet</a>
+        <a href="https://github.com/GTAVENOM/The-Rusty-Terminal" target="_blank" class="github-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          GitHub Repo
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero-section">
+    <div class="hero-container reveal">
+
+      <h1 class="hero-title">
+        Plain English <span class="arrow">→</span><br>
+        <span class="gradient-text">Instant Shell Commands</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Rusty Terminal is a high-speed, <strong>offline-first AI terminal wrapper and independent terminal app</strong>
+        built for <strong>Windows (PowerShell &amp; cmd.exe)</strong> and <strong>macOS (zsh &amp; bash)</strong>.
+        Seamlessly turn intent into safe shell commands with built-in 3-Tier Safety across OS boundaries.
+      </p>
+
+      <!-- Platform Tags -->
+      <div class="platform-tags">
+        <span class="tag">🪟 Windows (PowerShell &amp; CMD)</span>
+        <span class="tag">🍎 macOS (zsh &amp; bash)</span>
+        <span class="tag">🤖 Offline-First Sub-1GB AI Engine</span>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="cta-group">
+        <a href="https://github.com/GTAVENOM/The-Rusty-Terminal" target="_blank" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          View GitHub Repository
+        </a>
+        <a href="#demo" class="btn btn-secondary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3" />
+          </svg>
+          Try Interactive Demo
+        </a>
+      </div>
+
+      <!-- Liquid Glass One-Liner Terminal Copy Box -->
+      <div class="install-box liquid-glass" id="install">
+        <div class="install-header">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="powershell">🪟 Windows PowerShell</button>
+            <button class="tab-btn" data-tab="cmd">🪟 Windows CMD</button>
+            <button class="tab-btn" data-tab="macos">🍎 macOS (zsh/bash)</button>
+          </div>
+        </div>
+
+        <div class="install-code-container">
+          <code id="install-code" class="install-code">irm https://rustyterminal.vercel.app/install.ps1 | iex</code>
+          <button id="copy-btn" class="copy-btn" title="Copy to clipboard">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+            </svg>
+            <span id="copy-text">Copy</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Interactive Terminal Simulator Section -->
+  <section class="demo-section" id="demo">
+    <div class="section-container reveal">
+      <div class="section-header">
+        <h2>Interactive Web Terminal Preview</h2>
+        <p>Type a natural language prompt or click one of the quick test chips below:</p>
+      </div>
+
+      <div class="sample-chips">
+        <button class="chip" data-prompt="pull ubuntu latest image">Docker Image Pull</button>
+        <button class="chip" data-prompt="increase pods">Kubernetes Pod Scaling</button>
+        <button class="chip" data-prompt="give full permissions to coding.c file">File Permissions</button>
+        <button class="chip" data-prompt="I want a Python script that renames files">Code-Gen Agent</button>
+        <button class="chip" data-prompt="ModuleNotFoundError: No module named requests">Error Help</button>
+        <button class="chip" data-prompt="git push --force">Destructive Tier 3</button>
+      </div>
+
+      <div class="terminal-window liquid-glass">
+        <div class="terminal-bar">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+        </div>
+
+        <div class="terminal-body" id="terminal-body">
+          <div class="line welcome">🦀 Rusty Terminal AI Assistant Ready (Offline Model: Qwen2.5-Coder-1.5B &lt;1GB).</div>
+          <div class="line comment"># Type natural language below and press Enter or press Ctrl+V for inline suggestions
+          </div>
+
+          <div class="output-block" id="output-area"></div>
+
+          <div class="input-line">
+            <span class="prompt-symbol">PS V:\Project&gt; rusty-cli suggest "</span>
+            <input type="text" id="demo-input"
+              placeholder="type prompt e.g. pull ubuntu image or give permissions to file...">
+            <span class="prompt-symbol">"</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Liquid Glass Bento Grid Features Section -->
+  <section class="features-section" id="features">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <h2>Built For Windows &amp; macOS Developers</h2>
+        <p>Engineered for team collaboration across operating system boundaries with zero friction.</p>
+      </div>
+
+      <!-- Responsive Liquid Glass Bento Grid -->
+      <div class="bento-grid">
+
+        <!-- Bento Card 1: Wide Hero Card -->
+        <div class="bento-card bento-wide liquid-glass reveal">
+          <div class="bento-badge">Cross-Platform Native</div>
+          <div class="card-icon">💻</div>
+          <h3>Windows &amp; macOS Native</h3>
+          <p>Built for developers collaborating across OS boundaries. Full native support for <strong>Windows (PowerShell &amp; cmd.exe)</strong> and <strong>macOS (zsh &amp; bash)</strong> with identical keybindings and safety gates.</p>
+        </div>
+
+        <!-- Bento Card 2: Wide Hero Card -->
+        <div class="bento-card bento-wide liquid-glass reveal">
+          <div class="bento-badge">Sub-1GB Neural Engine</div>
+          <div class="card-icon">⚡</div>
+          <h3>Smart Sub-1GB AI Model</h3>
+          <p>Powered by <strong>Qwen2.5-Coder-1.5B</strong> GGUF (~980MB). Over 3x higher reasoning intelligence for open-ended natural English sentences, strictly under 1GB storage. Zero cloud requirement.</p>
+        </div>
+
+        <!-- Bento Card 3: Standard Card -->
+        <div class="bento-card liquid-glass reveal">
+          <div class="bento-badge">Dynamic AI Reasoning</div>
+          <div class="card-icon">🧠</div>
+          <h3>Zero Fixed Rulebooks</h3>
+          <p>Accepts <strong>ANY arbitrary English prompt</strong> (e.g. <em>"pull ubuntu latest image"</em>, <em>"increase pods"</em>, <em>"give full permissions to coding.c"</em>, <em>"install express with npm"</em>) and generates executable commands with dynamic safety tiering.</p>
+        </div>
+
+        <!-- Bento Card 4: Standard Card -->
+        <div class="bento-card liquid-glass reveal">
+          <div class="card-icon">🛡️</div>
+          <h3>3-Tier Command Safety Gate</h3>
+          <p>Tier 1 Read-Only commands auto-execute. Tier 2 Idempotent commands prompt confirmation <code>[Y/n]</code>. Tier 3 Destructive commands are displayed as <strong>[DESTRUCTIVE — reference only]</strong> read-only text and blocked from shell auto-insertion.</p>
+        </div>
+
+        <!-- Bento Card 5: Standard Card -->
+        <div class="bento-card liquid-glass reveal">
+          <div class="card-icon">🩺</div>
+          <h3>Bounded Error Help Engine</h3>
+          <p>Pattern matches non-zero exit codes &amp; stderr output (missing packages, port conflicts, permission denied, script syntax errors) to surface instant 1-line fix suggestions.</p>
+        </div>
+
+        <!-- Bento Card 6: Standard Card -->
+        <div class="bento-card liquid-glass reveal">
+          <div class="card-icon">📄</div>
+          <h3>Code Generation Agent</h3>
+          <p>Natural language goals (<em>"I want a Python script that renames files"</em>) generate code directly to files in <code>.rusty_scratch/</code> with numeric collision protection (<code>script_1.py</code>).</p>
+        </div>
+
+        <!-- Bento Card 7: Standard Card -->
+        <div class="bento-card liquid-glass reveal">
+          <div class="card-icon">🔍</div>
+          <h3>Multi-Option Disambiguation</h3>
+          <p>Ambiguous inputs (e.g. <code>go to folder</code>) automatically present a numbered choice menu (<code>[1] cd folder/ [2] cd folder_backend/</code>) for instant 1-click selection.</p>
+        </div>
+
+        <!-- Bento Card 8: Standard Card -->
+        <div class="bento-card liquid-glass reveal">
+          <div class="card-icon">⌨️</div>
+          <h3>Everywhere Autocomplete (Ctrl+V)</h3>
+          <p>Live inline ghost-text via <strong>PSReadLine predictor</strong> on Windows, zsh/bash on macOS, and <strong>cmd.exe trigger list</strong> (<code>Ctrl+V</code> keybinding).</p>
+        </div>
+
+        <!-- Bento Card 9: Standard Card -->
+        <div class="bento-card liquid-glass reveal">
+          <div class="card-icon">🗄️</div>
+          <h3>3-Way Local History &amp; Privacy</h3>
+          <p>Tracks <strong>Suggested</strong>, <strong>Accepted</strong>, and <strong>Rejected</strong> commands in local SQLite (<code>rusty.db</code>). 100% private with zero cloud telemetry.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Liquid Glass Cheatsheet Table -->
+  <section class="cheatsheet-section" id="cheatsheet">
+    <div class="section-container reveal">
+      <div class="section-header">
+        <h2>rusty-cli Commands &amp; Keybindings</h2>
+        <p>Complete list of CLI subcommands and keyboard shortcuts.</p>
+      </div>
+
+      <div class="table-container liquid-glass">
+        <table>
+          <thead>
+            <tr>
+              <th>Command / Hotkey</th>
+              <th>Action</th>
+              <th>Example Usage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>rusty-cli "<prompt>"</code></td>
+              <td>Translates natural language &amp; executes command in color</td>
+              <td><code>rusty-cli "pull ubuntu image"</code></td>
+            </tr>
+            <tr>
+              <td><code>Ctrl+V</code></td>
+              <td>Triggers inline shell AI suggestion overlay</td>
+              <td>Press <code>Ctrl+V</code> in PowerShell or Terminal</td>
+            </tr>
+            <tr>
+              <td><code>Ctrl+Shift+R</code> / <code>rusty-cli overlay</code></td>
+              <td>Opens ANSI Ratatui TUI Panel (Settings, Chat, History)</td>
+              <td><code>rusty-cli overlay</code></td>
+            </tr>
+            <tr>
+              <td><code>rusty-cli clean-scratch</code></td>
+              <td>Cleans generated scratch files from <code>.rusty_scratch/</code></td>
+              <td><code>rusty-cli clean-scratch</code></td>
+            </tr>
+            <tr>
+              <td><code>rusty-cli error-help "<cmd>" <code> "<err>"</code></td>
+              <td>Matches error against known pattern list for instant fix</td>
+              <td><code>rusty-cli error-help "python app.py" 1 "ModuleNotFoundError"</code></td>
+            </tr>
+            <tr>
+              <td><code>rusty-cli download-model</code></td>
+              <td>Pulls local Qwen2.5-Coder-1.5B GGUF model (&lt;1GB)</td>
+              <td><code>rusty-cli download-model</code></td>
+            </tr>
+            <tr>
+              <td><code>rusty-cli history</code></td>
+              <td>Displays 3-Way AI History Logs</td>
+              <td><code>rusty-cli history</code></td>
+            </tr>
+            <tr>
+              <td><code>rusty-cli config set-key <KEY></code></td>
+              <td>Stores encrypted cloud API key (DPAPI / Keychain)</td>
+              <td><code>rusty-cli config set-key sk-ant-...</code></td>
+            </tr>
+            <tr>
+              <td><code>rusty-cli setup-ps</code></td>
+              <td>Registers PowerShell PSReadLine keybinding (Ctrl+V)</td>
+              <td><code>rusty-cli setup-ps</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimalist Single-Line Footer -->
+  <footer class="minimal-footer">
+    <div class="footer-container">
+      <div class="footer-minimal-content">
+        <span>🦀 <strong>Rusty Terminal</strong> &copy; 2026 — MIT Licensed</span>
+        <span class="dot-separator">•</span>
+        <a href="https://github.com/GTAVENOM/The-Rusty-Terminal" target="_blank">GitHub</a>
+        <span class="dot-separator">•</span>
+        <a href="#install">Install</a>
+        <span class="dot-separator">•</span>
+        <a href="#features">Features</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

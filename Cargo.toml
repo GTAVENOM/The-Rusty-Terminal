@@ -1,0 +1,43 @@
+[package]
+name = "rusty-terminal"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.92"
+
+[lib]
+name = "rusty_terminal"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rusty"
+path = "src/main.rs"
+
+[[bin]]
+name = "rusty-cli"
+path = "src/bin/rusty_cli.rs"
+
+[workspace]
+exclude = ["vendor"]
+
+[dependencies]
+egui = "0.35"
+eframe = { version = "0.35", default-features = false, features = [
+    "default_fonts",
+    "wgpu",
+] }
+wgpu = "29"
+egui_term = { path = "vendor/egui_term" }
+alacritty_terminal = { path = "vendor/alacritty_terminal" }
+rusqlite = { version = "0.32", features = ["bundled"] }
+ureq = { version = "2", features = ["json", "tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+dirs = "6"
+log = "0.4"
+env_logger = "0.11"
+ratatui = "0.29"
+crossterm = "0.28"
+
+
+[profile.release]
+opt-level = 2

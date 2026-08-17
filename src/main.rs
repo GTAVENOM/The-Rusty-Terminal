@@ -1,7 +1,5 @@
 use std::error::Error;
-use std::io::{self, Write};
-use rustyline::DefaultEditor;
-use rustyline::{Config,CompletionType,error::ReadlineError};
+use rustyline::{Config, CompletionType, error::ReadlineError};
 use crate::actions::CommandAction;
 use crate::executor::SystemExecutor;
 use crate::parser::ai_parser::AiParser;
@@ -12,6 +10,7 @@ mod parser;
 mod executor;
 mod actions;
 mod completer;
+mod fuzzy;
 fn main() -> Result<(), Box<dyn Error>>{
     println!("Welcome to The Rusty Terminal 🦀");
     println!("Type 'bye' to quit\n");
@@ -35,9 +34,21 @@ fn main() -> Result<(), Box<dyn Error>>{
         let _ =rl.load_history(path);
     }
 
-    loop{
-        let readline=rl.readline("> ");
-        match readline{
+    loop {
+        let cwd = std::env::current_dir()
+            .map(|p| {
+                if let Some(home) = dirs::home_dir() {
+                    if let Ok(rel) = p.strip_prefix(&home) {
+                        return format!("~/{}", rel.display());
+                    }
+                }
+                p.display().to_string()
+            })
+            .unwrap_or_else(|_| ".".to_string());
+
+        let prompt = format!("{} > ", cwd);
+        let readline = rl.readline(&prompt);
+        match readline {
             Ok(line)=>{
                 let trimmed=line.trim();
                 if trimmed.is_empty(){

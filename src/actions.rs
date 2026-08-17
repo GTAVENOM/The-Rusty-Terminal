@@ -8,6 +8,8 @@ pub enum CommandAction {
     OpenApp {name: String},
     OpenFolder {path: PathBuf},
     ExecuteSystemCommand {command: String, args: Vec<String>},
+    ChangeDirectory {path: PathBuf},
+    ClearScreen,
     Exit,
     #[serde(other)]
     Unknown,

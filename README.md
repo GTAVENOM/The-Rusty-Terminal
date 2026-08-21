@@ -1,59 +1,52 @@
-# 🦀 Rusty Terminal — Cross-Platform AI Terminal App & Shell Wrapper
+# 🦀 Rusty Terminal — Cross-Platform AI Terminal App & Shell Engine
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Rust](https://img.shields.io/badge/Rust-1.92%2B-orange.svg)](https://www.rust-lang.org/)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS-blue.svg)](https://github.com/GTAVENOM/The-Rusty-Terminal)
 [![Website](https://img.shields.io/badge/Website-rustyterminal.vercel.app-brightgreen.svg)](https://rustyterminal.vercel.app)
+[![GTAVENOM Repo](https://img.shields.io/badge/GitHub-GTAVENOM%2FThe--Rusty--Terminal-blue.svg)](https://github.com/GTAVENOM/The-Rusty-Terminal)
+[![KrishkkT Repo](https://img.shields.io/badge/GitHub-KrishkkT%2Ftherustyterminal-purple.svg)](https://github.com/KrishkkT/therustyterminal)
 
-> **Plain English → Instant, Safe Shell Commands with Built-in 3-Tier Safety & Sub-1GB Offline AI**
+> **Plain English → Instant Shell Commands with Built-in 3-Tier Safety & Sub-1GB Offline AI**
 
-Rusty Terminal is a high-speed, **offline-first AI terminal wrapper and independent terminal app** built for **Windows (PowerShell & `cmd.exe`)** and **macOS (`zsh` & `bash`)**. Seamlessly turn natural English intent into executable shell commands with zero cloud latency or privacy risk.
+Rusty Terminal is a high-speed, **offline-first AI terminal wrapper and independent terminal app** built for **Windows (PowerShell & `cmd.exe`)** and **macOS (`zsh` & `bash`)**. Seamlessly convert natural English intent into executable shell commands with zero cloud latency or privacy risks.
 
 ---
 
-## ⚡ Quick Start & Installation
+## 👥 Authors & Maintainers
 
-### 📦 Simple Package Manager Install Commands
+| Author / Maintainer | Role | GitHub Profile |
+| :--- | :--- | :--- |
+| **GTAVENOM** | Core Architect & Public Release Repository Lead | [@GTAVENOM](https://github.com/GTAVENOM) |
+| **KrishkkT** | Engine Developer & Web Deployment Maintainer | [@KrishkkT](https://github.com/KrishkkT) |
 
-#### 1. 📦 npm (Global Install)
-```bash
-npm i -g rusty-terminal
-```
+* **Official Website**: [rustyterminal.vercel.app](https://rustyterminal.vercel.app)
+* **Main Public GitHub Repository**: [GTAVENOM/The-Rusty-Terminal](https://github.com/GTAVENOM/The-Rusty-Terminal)
+* **Development & Deployment Repository**: [KrishkkT/therustyterminal](https://github.com/KrishkkT/therustyterminal)
 
-#### 2. ⚡ npx (Run without installing)
-```bash
-npx rusty-terminal
-```
+---
 
-#### 3. 🪟 Windows PowerShell One-Liner
-```powershell
-irm rustyterminal.vercel.app/i | iex
-```
+## 🚀 Simple 1-Line Installation Commands
 
-#### 4. 🪟 WinGet (Windows Package Manager)
-```cmd
-winget install rusty-terminal
-```
-
-#### 5. 🍎 macOS / Linux (zsh / bash)
-```bash
-curl -fsSL rustyterminal.vercel.app/mac | sh
-```
+| Method | OS / Shell | Command |
+| :--- | :--- | :--- |
+| **📦 npm** | Cross-Platform | `npm i -g rusty-terminal` |
+| **⚡ npx** | Instant Run | `npx rusty-terminal` |
+| **🪟 WinGet** | Windows | `winget install rusty-terminal` |
+| **🪟 PowerShell** | Windows | `irm rustyterminal.vercel.app/i \| iex` |
+| **🍎 macOS / Linux** | zsh / bash | `curl -fsSL rustyterminal.vercel.app/mac \| sh` |
 
 ---
 
 ## 🔥 Key Architectural Features
 
-| Feature | Description | Example Command / Shortcut |
-| :--- | :--- | :--- |
-| **⚡ Smart Command Alias Generator** | Synthesize custom shortcuts for multi-step terminal tasks stored in SQLite. | `rusty alias build-all "cargo build && npm run build"` |
-| **📜 Cross-Shell History Synchronizer** | Search 3-way historical execution logs across PowerShell, CMD, and WSL with safety tier records. | `rusty history git` |
-| **🔍 Interactive Dry-Run Sandbox** | Preview generated execution plans and safety tier classifications without running anything on disk. | `rusty dry-run "remove temp build files"` |
-| **💡 Live Log Stream Error Healing** | Pattern matches non-zero exit codes & stderr to surface instant 1-line remediation suggestions. | `rusty error-help "python app.py" 1 "ModuleNotFoundError"` |
-| **📂 Multi-File Code Gen Pipeline** | Natural language goals generate clean code files directly into `.rusty_scratch/`. | `rusty scratch clean` |
-| **🖥️ ANSI Ratatui TUI Overlay** | Full interactive ANSI terminal interface with Settings, AI Chat, and History tabs. | `rusty overlay` (or `Ctrl+Shift+R`) |
-| **⌨️ Everywhere Autocomplete** | Live inline ghost-text suggestions via PSReadLine on Windows & zsh/bash on macOS. | `Ctrl+V` |
-| **🛡️ 3-Tier Safety Gates** | **Tier 1**: Read-only auto-executes.<br>**Tier 2**: Idempotent prompts `[Y/n]`.<br>**Tier 3**: Destructive commands displayed as read-only text and blocked. | Automatic classification |
+1. **⚡ Smart Command Alias Generator**: Synthesize custom shortcuts for multi-step terminal tasks stored in SQLite (`rusty alias build-all "cargo build && npm run build"`).
+2. **📜 Cross-Shell History Synchronizer**: Search unified execution logs across PowerShell, CMD, and WSL with safety tier records (`rusty history git`).
+3. **🔍 Interactive Dry-Run Sandbox**: Preview generated execution plans and safety tier classifications without running anything on disk (`rusty dry-run "<prompt>"`).
+4. **💡 Live Log Stream Error Healing**: Pattern matches non-zero exit codes & stderr to surface instant 1-line fix suggestions (`rusty error-help`).
+5. **📂 Multi-File Code Generation Pipeline**: Natural language goals generate clean code files directly into `.rusty_scratch/` (`rusty scratch clean`).
+6. **🖥️ ANSI Ratatui TUI Overlay**: Press **Ctrl+Shift+R** or run `rusty overlay` to launch the interactive ANSI terminal interface with Settings, AI Chat, and History.
+7. **⌨️ Everywhere Autocomplete**: Live inline ghost-text suggestions via PSReadLine on Windows & zsh/bash on macOS (`Ctrl+V`).
+8. **🛡️ 3-Tier Safety Gates**: Auto-executes Tier 1 Read-Only commands, prompts `[Y/n]` for Tier 2 Idempotent commands, and blocks Tier 3 Destructive commands.
 
 ---
 
@@ -63,16 +56,16 @@ curl -fsSL rustyterminal.vercel.app/mac | sh
 # 1. Network & IP Configuration
 rusty "please show my ip address"
 
-# 2. File System Listing & Sorting
+# 2. Drive & File Storage Search
 rusty "list the 10 largest files in V:\ drive"
 
-# 3. Dynamic Extension Search
+# 3. Dynamic Pattern Search
 rusty "find all .rs files"
 
-# 4. Directory Target Inspection
+# 4. Folder Inspection
 rusty "what is inside desktop folder"
 
-# 5. Disk Space & Storage
+# 5. Storage Inspection
 rusty "how much free disk space is left"
 
 # 6. Active System Processes
@@ -87,7 +80,7 @@ rusty "check git status"
 # 9. Git Commit History
 rusty "show recent commits"
 
-# 10. System Specifications
+# 10. System Information
 rusty "show system info"
 
 # 11. Multi-File Code Scaffolding
@@ -102,49 +95,26 @@ rusty alias dev-build "cargo build && cargo test"
 # 14. Cross-Shell History Search
 rusty history
 
-# 15. Live Error Diagnosis & Fix
+# 15. Live Error Diagnosis & Remediation
 rusty error-help "python app.py" 1 "ModuleNotFoundError: No module named 'requests'"
 ```
 
 ---
 
-## 📁 Repository Structure
+## 📁 Repository Structure Overview
 
-```
-The-Rusty-Terminal/
-├── README.md                 # Main GitHub README (this file)
-├── COMMANDS.md               # Complete 15-command prompt reference guide
-├── package.json              # NPM package definition for npm i -g rusty-terminal
-├── bin/                      # NPM binary installer wrappers
-│   ├── install.js
-│   └── rusty.js
-├── windows/                  # Windows Rust Engine & GUI/TUI codebase
-│   ├── Cargo.toml            # Rust cargo manifest
-│   ├── src/                  # Core Rust source modules
-│   │   ├── bin/rusty_cli.rs  # Main rusty CLI entry point
-│   │   ├── execution/        # Command planner & heuristics
-│   │   ├── intent/           # Code generation & local GGUF model handler
-│   │   ├── safety/           # 3-Tier safety classifier
-│   │   ├── error_help/       # Exit code anomaly detector
-│   │   ├── learning/         # SQLite history & alias database
-│   │   └── ui/               # egui GUI & Ratatui ANSI TUI overlay
-│   └── website/              # Public landing page deployed to Vercel
-└── macos/                    # macOS zsh/bash integration module
-```
+### 1. `GTAVENOM / The-Rusty-Terminal` (Public Release Repo)
+* `windows/`: Windows engine source code & submodules.
+* `package.json`: Global npm package configuration.
+* `README.md`: Project overview & installation guide.
 
----
-
-## 🌐 Public Website
-
-Visit the official website: [rustyterminal.vercel.app](https://rustyterminal.vercel.app)
-
-Run locally:
-```powershell
-rusty website
-```
+### 2. `KrishkkT / therustyterminal` (Development & Website Repo)
+* `src/`: Core Rust CLI engine, heuristics, safety gates, and TUI.
+* `website/`: Public landing page deployed at `rustyterminal.vercel.app`.
+* `scripts/`: PowerShell & CMD installer scripts.
 
 ---
 
 ## 📜 License
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+Distributed under the **MIT License**. Created & Maintained by **GTAVENOM** & **KrishkkT**.

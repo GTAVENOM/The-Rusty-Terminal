@@ -1,0 +1,12 @@
+# Rust build targets
+/target/
+windows/target/
+*.pdb
+*.exe
+*.dll
+
+# IDE and temporary folders
+.idea/
+.claude/
+.rusty_scratch/
+node_modules/

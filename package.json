@@ -1,0 +1,30 @@
+{
+  "name": "rusty-terminal",
+  "version": "1.0.0",
+  "description": "Cross-Platform Plain English -> Instant Shell Commands AI Terminal",
+  "main": "index.js",
+  "bin": {
+    "rusty": "./bin/rusty.js",
+    "rusty-cli": "./bin/rusty.js",
+    "rusty-terminal": "./bin/rusty.js"
+  },
+  "scripts": {
+    "install": "node bin/install.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GTAVENOM/The-Rusty-Terminal.git"
+  },
+  "keywords": [
+    "rusty-terminal",
+    "ai-terminal",
+    "powershell",
+    "cli",
+    "cmd",
+    "zsh",
+    "bash",
+    "terminal"
+  ],
+  "author": "GTAVENOM",
+  "license": "MIT"
+}
